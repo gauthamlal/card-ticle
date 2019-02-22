@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import "../styles/card.css";
 
-export default class CardComponent extends Component {
+class CardComponent extends Component {
   render() {
     const data = this.props.card;
     return (
@@ -15,3 +16,12 @@ export default class CardComponent extends Component {
     );
   }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+  card: state.cardData[ownProps.index]
+});
+
+export default connect(
+  mapStateToProps,
+  {}
+)(CardComponent);
