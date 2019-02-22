@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import {
   toggleLike,
@@ -25,7 +26,8 @@ class CardComponent extends Component {
     const data = this.props.card;
     return (
       <div className="card">
-        <h2>{data.title}</h2>
+        {/* <h2></h2> */}
+        <Link to={`/story/${this.props.index}`}>{data.title}</Link>
         <article>
           <p>{data.description}</p>
         </article>
