@@ -5,7 +5,7 @@ const cardData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut consequat odio. Curabitur interdum massa at tortor cursus, ut gravida magna finibus. In et nulla auctor, fringilla arcu vel, dictum ex. Cras rutrum tortor id ex ultricies, eu feugiat quam laoreet. Suspendisse cursus nulla vel bibendum ultricies. Vivamus placerat scelerisque nisi, vel ornare ante facilisis quis. Nullam mollis elit vitae vulputate ultrices.",
     tags: ["Politics", "India"],
-    isLiked: false,
+    isLiked: true,
     isDisliked: false,
     isBookmarked: false
   },
