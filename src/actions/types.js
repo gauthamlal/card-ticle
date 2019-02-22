@@ -1,0 +1,3 @@
+export const LIKE_TOGGLE = "LIKE_TOGGLE";
+export const DISLIKE_TOGGLE = "DISLIKE_TOGGLE";
+export const BOOKMARK_TOGGLE = "BOOKMARK_TOGGLE";
