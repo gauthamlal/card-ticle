@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import store from "./store";
 import IndexComponent from "./components/IndexComponent";
 import IndividualComponent from "./components/IndividualComponent";
+import NavbarComponent from "./components/NavbarComponent";
 import "./App.css";
 
 class App extends Component {
@@ -13,10 +14,11 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <h1>Card-Ticle</h1>
-            <Route exact path="/" component={IndexComponent} />
-            <Route path="/story/:storyId" component={IndividualComponent} />
-            {/* <IndexComponent /> */}
+            <NavbarComponent />
+            <div className="container">
+              <Route exact path="/" component={IndexComponent} />
+              <Route path="/story/:storyId" component={IndividualComponent} />
+            </div>
           </div>
         </Router>
       </Provider>

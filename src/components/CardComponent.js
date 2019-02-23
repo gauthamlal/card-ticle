@@ -27,7 +27,7 @@ class CardComponent extends Component {
     const data = this.props.card;
     return (
       <div className="card">
-        {/* <h2></h2> */}
+        {/* <img src="" alt=""/> */}
         {this.props.fromIndex ? (
           <h2>
             <Link to={`/story/${this.props.index}`}>{data.title}</Link>
