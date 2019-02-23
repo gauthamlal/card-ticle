@@ -7,7 +7,7 @@ class IndexComponent extends Component {
   render() {
     const cardStack = [];
     for (let i = 0; i < this.props.cardSize; i++) {
-      cardStack.push(<CardComponent key={i} index={i} />);
+      cardStack.push(<CardComponent key={i} index={i} fromIndex={true} />);
     }
 
     return <div>{cardStack}</div>;

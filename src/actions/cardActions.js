@@ -12,7 +12,7 @@ export const toggleLike = index => {
   };
 };
 
-// Toggle the like of a card
+// Toggle the dislike of a card
 export const toggleDislike = index => {
   console.log("inside toggleLike", { type: DISLIKE_TOGGLE, index });
 
@@ -22,7 +22,7 @@ export const toggleDislike = index => {
   };
 };
 
-// Toggle the like of a card
+// Toggle the bookmark of a card
 export const toggleBookmark = index => {
   console.log("inside toggleLike", { type: BOOKMARK_TOGGLE, index });
 

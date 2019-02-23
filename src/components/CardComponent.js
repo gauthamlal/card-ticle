@@ -28,7 +28,13 @@ class CardComponent extends Component {
     return (
       <div className="card">
         {/* <h2></h2> */}
-        <Link to={`/story/${this.props.index}`}>{data.title}</Link>
+        {this.props.fromIndex ? (
+          <h2>
+            <Link to={`/story/${this.props.index}`}>{data.title}</Link>
+          </h2>
+        ) : (
+          <h2>{data.title}</h2>
+        )}
         <article>
           <p>{data.description}</p>
         </article>

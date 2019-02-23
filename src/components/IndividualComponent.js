@@ -9,7 +9,10 @@ export default class IndividualComponent extends Component {
     return (
       <div>
         <h1>This is where I'll be showing Indiviual Components!</h1>
-        <CardComponent index={Number(this.props.match.params.storyId)} />
+        <CardComponent
+          index={Number(this.props.match.params.storyId)}
+          fromIndex={false}
+        />
       </div>
     );
   }
