@@ -3,3 +3,14 @@
   margin: 10px 20px;
   padding: 10px 10px;
 }
+
+/* .card__img-holder {
+  width: 100%;
+  max-width: 500px;
+} */
+
+.card__img-holder > img {
+  width: 100%;
+  max-width: 600px;
+  object-fit: cover;
+}

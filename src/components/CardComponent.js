@@ -24,10 +24,14 @@ class CardComponent extends Component {
   };
 
   render() {
+    const imageLink =
+      this.props.index % 2 === 0 ? "nathan.jpg" : "daredevil.jpg";
     const data = this.props.card;
     return (
       <div className="card">
-        {/* <img src="" alt=""/> */}
+        <div className="card__img-holder">
+          <img src={`/images/${imageLink}`} alt="nathan" />
+        </div>
         {this.props.fromIndex ? (
           <h2>
             <Link to={`/story/${this.props.index}`}>{data.title}</Link>
