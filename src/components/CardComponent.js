@@ -57,7 +57,7 @@ class CardComponent extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  card: state.cardData[ownProps.index]
+  card: state.card.cardData[ownProps.index]
 });
 
 const mapDispatchToProps = dispatch => ({

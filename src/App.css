@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 0.03fr 1fr;
+  grid-template-rows: 100px 1fr;
 }
 
 .navbar {
@@ -13,10 +13,42 @@
   position: fixed;
   width: 100%;
   top: 0;
-  /* height: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navbar > button {
+  /* margin-right: auto; */
+  /* justify-self: flex-start; */
+}
+
+.navbar > h1 {
+  /* text-align: center; */
+  position: absolute;
+  left: 50%;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+}
+
+.navbar > h2 {
+  margin-left: auto;
+  /* justify-self: flex-end; */
+  visibility: hidden;
 }
 
 .container {
   grid-column: 4 / -4;
   grid-row: 2 / -1;
+}
+
+.hamburger {
+  grid-column: 1 / 3;
+  grid-row: 2 / -1;
+  background-color: gray;
+  color: black;
+  /* opacity: 1; */
+  transition: opacity 0.2s ease-in;
+  z-index: 1;
 }

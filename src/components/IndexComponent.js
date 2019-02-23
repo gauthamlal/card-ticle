@@ -15,7 +15,7 @@ class IndexComponent extends Component {
 }
 
 const mapStateToProps = state => ({
-  cardSize: state.cardData.length
+  cardSize: state.card.cardData.length
 });
 
 export default connect(
