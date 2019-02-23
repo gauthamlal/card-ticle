@@ -2,13 +2,21 @@
   text-align: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: 200px 1fr; */
+  grid-template-rows: 0.03fr 1fr;
 }
 
 .navbar {
   grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* height: 100px; */
 }
 
 .container {
   grid-column: 4 / -4;
+  grid-row: 2 / -1;
 }
