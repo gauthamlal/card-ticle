@@ -1,5 +1,7 @@
-const cardData = [
-  {
+import { List, Map } from "immutable";
+
+const cardData = List([
+  Map({
     id: 0,
     title: "Nulla rhoncus",
     description:
@@ -8,8 +10,8 @@ const cardData = [
     isLiked: true,
     isDisliked: false,
     isBookmarked: false
-  },
-  {
+  }),
+  Map({
     id: 1,
     title: "Fusce interdum",
     description:
@@ -18,8 +20,8 @@ const cardData = [
     isLiked: false,
     isDisliked: false,
     isBookmarked: false
-  },
-  {
+  }),
+  Map({
     id: 2,
     title: "Phasellus",
     description:
@@ -28,8 +30,8 @@ const cardData = [
     isLiked: false,
     isDisliked: false,
     isBookmarked: false
-  },
-  {
+  }),
+  Map({
     id: 3,
     title: "Curabitur",
     description:
@@ -38,8 +40,8 @@ const cardData = [
     isLiked: false,
     isDisliked: false,
     isBookmarked: false
-  },
-  {
+  }),
+  Map({
     id: 4,
     title: "Pellentesque",
     description:
@@ -48,7 +50,7 @@ const cardData = [
     isLiked: false,
     isDisliked: false,
     isBookmarked: false
-  }
-];
+  })
+]);
 
 export default cardData;

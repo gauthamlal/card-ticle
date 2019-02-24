@@ -20,10 +20,10 @@
   height: 100px;
 }
 
-.navbar > button {
-  /* margin-right: auto; */
-  /* justify-self: flex-start; */
-}
+/* .navbar > button {
+  margin-right: auto;
+  justify-self: flex-start;
+} */
 
 .navbar > h1 {
   /* text-align: center; */
@@ -61,7 +61,7 @@
   /* bottom: 0; */
   width: 150px;
   height: 100vh;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .index,

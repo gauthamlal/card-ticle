@@ -27,6 +27,8 @@ class CardComponent extends Component {
     const imageLink =
       this.props.index % 2 === 0 ? "nathan.jpg" : "daredevil.jpg";
     const data = this.props.card;
+    console.log("inside card", this.props);
+
     return (
       <div className="card">
         <div className="card__img-holder">
@@ -34,22 +36,22 @@ class CardComponent extends Component {
         </div>
         {this.props.fromIndex ? (
           <h2>
-            <Link to={`/story/${this.props.index}`}>{data.title}</Link>
+            <Link to={`/story/${this.props.index}`}>{data.get("title")}</Link>
           </h2>
         ) : (
-          <h2>{data.title}</h2>
+          <h2>{data.get("title")}</h2>
         )}
         <article>
-          <p>{data.description}</p>
+          <p>{data.get('description')}</p>
         </article>
         <button onClick={this.handleLikeClick}>
-          {data.isLiked ? "Liked" : "Like"}
+          {data.get('isLiked') ? "Liked" : "Like"}
         </button>
         <button onClick={this.handleDislikeClick}>
-          {data.isDisliked ? "Disliked" : "Dislike"}
+          {data.get('isDisliked') ? "Disliked" : "Dislike"}
         </button>
         <button onClick={this.handleBookmarkClick}>
-          {data.isBookmarked ? "Bookmarked" : "Bookmark"}
+          {data.get('isBookmarked') ? "Bookmarked" : "Bookmark"}
         </button>
       </div>
     );
@@ -57,7 +59,7 @@ class CardComponent extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  card: state.card.cardData[ownProps.index]
+  card: state.card.cardData.get(ownProps.index)
 });
 
 const mapDispatchToProps = dispatch => ({
