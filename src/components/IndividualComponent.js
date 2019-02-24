@@ -7,7 +7,7 @@ export default class IndividualComponent extends Component {
     console.log(this.props);
 
     return (
-      <div>
+      <div className="individual">
         <h1>This is where I'll be showing Indiviual Components!</h1>
         <CardComponent
           index={Number(this.props.match.params.storyId)}

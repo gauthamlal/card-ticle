@@ -16,6 +16,9 @@ class App extends Component {
         <Router>
           <div className="App">
             <NavbarComponent />
+            {/* <div className="hamburger-container">
+              
+            </div> */}
             {/* {store.getState().hamburger.isOpen && <HamburgerMenuComponent />} */}
             <HamburgerMenuComponent />
             <div className="container">

@@ -10,7 +10,7 @@ class IndexComponent extends Component {
       cardStack.push(<CardComponent key={i} index={i} fromIndex={true} />);
     }
 
-    return <div>{cardStack}</div>;
+    return <div className="index">{cardStack}</div>;
   }
 }
 
