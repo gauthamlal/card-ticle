@@ -1,5 +1,9 @@
 import { SHOW_ALL, SHOW_LIKED, SHOW_DISLIKED, SHOW_BOOKMARKED } from "./types";
 
+export const visibilityFilterAction = filter => ({
+  type: filter
+});
+
 export const showAll = () => ({
   type: SHOW_ALL
 });
