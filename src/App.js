@@ -7,6 +7,7 @@ import IndexComponent from "./components/IndexComponent";
 import IndividualComponent from "./components/IndividualComponent";
 import NavbarComponent from "./components/NavbarComponent";
 import HamburgerMenuComponent from "./components/HamburgerMenuComponent";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 class App extends Component {
@@ -14,18 +15,29 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App">
-            <NavbarComponent />
-            {/* <div className="hamburger-container">
-              
-            </div> */}
-            {/* {store.getState().hamburger.isOpen && <HamburgerMenuComponent />} */}
-            <HamburgerMenuComponent />
-            <div className="container">
-              <Route exact path="/" component={IndexComponent} />
-              <Route path="/story/:storyId" component={IndividualComponent} />
+          <ScrollToTop>
+            <div className="App">
+              <NavbarComponent />
+              <HamburgerMenuComponent />
+              <div className="container">
+                {["/", "/liked", "/disliked", "/bookmarked"].map(
+                  (path, index) => (
+                    <Route
+                      exact
+                      path={path}
+                      key={index}
+                      component={IndexComponent}
+                    />
+                  )
+                )}
+                <Route
+                  exact
+                  path="/story/:storyId"
+                  component={IndividualComponent}
+                />
+              </div>
             </div>
-          </div>
+          </ScrollToTop>
         </Router>
       </Provider>
     );
