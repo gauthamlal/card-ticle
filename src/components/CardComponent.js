@@ -7,6 +7,7 @@ import {
   toggleDislike,
   toggleBookmark
 } from "../actions/cardActions";
+import shortenText from "../utils/shortenText";
 import "../styles/card.css";
 
 class CardComponent extends Component {
@@ -27,7 +28,6 @@ class CardComponent extends Component {
     const imageLink =
       this.props.index % 2 === 0 ? "nathan.jpg" : "daredevil.jpg";
     const data = this.props.card;
-    console.log("inside card", this.props);
 
     return (
       <div className="card">
@@ -42,16 +42,20 @@ class CardComponent extends Component {
           <h2>{data.get("title")}</h2>
         )}
         <article>
-          <p>{data.get('description')}</p>
+          <p>
+            {this.props.fromIndex
+              ? shortenText(data.get("description"))
+              : data.get("description")}
+          </p>
         </article>
         <button onClick={this.handleLikeClick}>
-          {data.get('isLiked') ? "Liked" : "Like"}
+          {data.get("isLiked") ? "Liked" : "Like"}
         </button>
         <button onClick={this.handleDislikeClick}>
-          {data.get('isDisliked') ? "Disliked" : "Dislike"}
+          {data.get("isDisliked") ? "Disliked" : "Dislike"}
         </button>
         <button onClick={this.handleBookmarkClick}>
-          {data.get('isBookmarked') ? "Bookmarked" : "Bookmark"}
+          {data.get("isBookmarked") ? "Bookmarked" : "Bookmark"}
         </button>
       </div>
     );

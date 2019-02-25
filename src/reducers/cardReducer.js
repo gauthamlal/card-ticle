@@ -6,7 +6,6 @@ const initialState = {
 };
 
 const cardReducer = (state = initialState, action) => {
-  console.log("inside reducer", action);
   switch (action.type) {
     case LIKE_TOGGLE:
       return {
