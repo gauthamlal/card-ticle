@@ -11,15 +11,20 @@ class HamburgerToggleComponent extends Component {
   };
 
   render() {
+    const classForHamburger = this.props.isOpen
+      ? "hamburger-menu animate"
+      : "hamburger-menu";
     return (
       <div className="menu-wrapper" onClick={this.handleClick}>
-        <div className="hamburger-menu" />
+        <div className={classForHamburger} />
       </div>
     );
   }
 }
 
-const mapStateToProps = () => ({});
+const mapStateToProps = state => ({
+  isOpen: state.hamburger.isOpen
+});
 
 const mapDispatchToProps = dispatch => ({
   hamburgerAction: () => dispatch(hamburgerAction())

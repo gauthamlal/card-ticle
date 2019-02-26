@@ -7,8 +7,8 @@
 .menu-wrapper {
   width: var(--bar-width);
   height: 16px;
-  padding-left: 20px;
-  padding-top: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -17,11 +17,14 @@
 .hamburger-menu::before {
   width: var(--bar-width);
   height: var(--bar-height);
+  transition: transform 0.3s ease-in;
+  display: block;
 }
 
 .hamburger-menu {
   background: rgba(255, 255, 255, 1);
   position: relative;
+  transition: background-color 0.2s ease-in;
   transform: translateY(var(--bar-spacing));
 }
 
@@ -39,4 +42,16 @@
   top: var(--bar-spacing);
   background: rgba(255, 255, 255, 1);
   left: 0;
+}
+
+.hamburger-menu.animate {
+  background: rgba(255, 255, 255, 0);
+}
+
+.hamburger-menu.animate::before {
+  transform: translate(0, 5px) rotate(45deg);
+}
+
+.hamburger-menu.animate::after {
+  transform: translate(0, -5px) rotate(-45deg);
 }
