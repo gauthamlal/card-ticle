@@ -4,11 +4,8 @@ import CardComponent from "./CardComponent";
 
 export default class IndividualComponent extends Component {
   render() {
-    console.log(this.props);
-
     return (
       <div className="individual">
-        <h1>This is where I'll be showing Indiviual Components!</h1>
         <CardComponent
           index={Number(this.props.match.params.storyId)}
           fromIndex={false}

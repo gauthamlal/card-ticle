@@ -6,7 +6,6 @@ import hamburgerAction from "../actions/hamburgerAction";
 
 class HamburgerToggleComponent extends Component {
   handleClick = e => {
-    console.log(this.props);
     this.props.hamburgerAction();
   };
 

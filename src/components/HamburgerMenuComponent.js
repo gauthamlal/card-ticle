@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import visibilityFilterAction from "../actions/visibilityActions";
+import hamburgerAction from "../actions/hamburgerAction";
+
 import {
   SHOW_ALL,
   SHOW_LIKED,
@@ -12,10 +14,10 @@ import {
 
 class HamburgerMenuComponent extends Component {
   handleFilterClick = filter => {
-    console.log("props in hamburger", this.props);
-
-    this.props.visibilityFilterAction(filter);
-    // this.props.history.push(url);
+    if (filter !== this.props.currentFilter) {
+      this.props.visibilityFilterAction(filter);
+      this.props.hamburgerAction();
+    }
   };
 
   render() {
@@ -53,11 +55,13 @@ class HamburgerMenuComponent extends Component {
 }
 
 const mapStateToProps = state => ({
-  isOpen: state.hamburger.isOpen
+  isOpen: state.hamburger.isOpen,
+  currentFilter: state.visibilityFilter
 });
 
 const mapDispatchToProps = dispatch => ({
-  visibilityFilterAction: filter => dispatch(visibilityFilterAction(filter))
+  visibilityFilterAction: filter => dispatch(visibilityFilterAction(filter)),
+  hamburgerAction: () => dispatch(hamburgerAction())
 });
 
 export default connect(
