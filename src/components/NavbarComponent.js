@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
-import hamburgerAction from "../actions/hamburgerAction";
+import HamburgerToggleComponent from "./HamburgerToggleComponent";
 
 class NavbarComponent extends Component {
-  handleClick = e => {
-    console.log(this.props);
-    this.props.hamburgerAction();
-  };
-
   render() {
     return (
       <div className="navbar">
-        <button onClick={this.handleClick}>Toggle</button>
+        <HamburgerToggleComponent />
+        {/* <button onClick={this.handleClick}>Toggle</button> */}
         <h1>Card-Ticle</h1>
         <h2>Dummy</h2>
       </div>
@@ -20,13 +15,4 @@ class NavbarComponent extends Component {
   }
 }
 
-const mapStateToProps = () => ({});
-
-const mapDispatchToProps = dispatch => ({
-  hamburgerAction: () => dispatch(hamburgerAction())
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavbarComponent);
+export default NavbarComponent;

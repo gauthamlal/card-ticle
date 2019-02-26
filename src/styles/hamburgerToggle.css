@@ -1,0 +1,42 @@
+:root {
+  --bar-width: 20px;
+  --bar-height: 2px;
+  --bar-spacing: 5px;
+}
+
+.menu-wrapper {
+  width: var(--bar-width);
+  height: 16px;
+  padding-left: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.hamburger-menu,
+.hamburger-menu::after,
+.hamburger-menu::before {
+  width: var(--bar-width);
+  height: var(--bar-height);
+}
+
+.hamburger-menu {
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  transform: translateY(var(--bar-spacing));
+}
+
+.hamburger-menu::before {
+  content: "";
+  position: absolute;
+  bottom: var(--bar-spacing);
+  background: rgba(255, 255, 255, 1);
+  left: 0;
+}
+
+.hamburger-menu::after {
+  content: "";
+  position: absolute;
+  top: var(--bar-spacing);
+  background: rgba(255, 255, 255, 1);
+  left: 0;
+}
