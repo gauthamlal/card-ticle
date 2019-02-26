@@ -30,24 +30,21 @@ class HamburgerMenuComponent extends Component {
             : "translate(-100%, 0)"
         }}
       >
-        <Link to="/">
-          <div className="hamburger__menu" onClick={() => this.handleFilterClick(SHOW_ALL)}>Home</div>
+        <Link className="hamburger__link" to="/">
+          <div onClick={() => this.handleFilterClick(SHOW_ALL)}>Home</div>
         </Link>
-        <br />
-        <Link className="hamburger__menu" to="/liked">
+        <Link className="hamburger__link" to="/liked">
           <div onClick={() => this.handleFilterClick(SHOW_LIKED)}>Liked</div>
         </Link>
-        <br />
-        <Link className="hamburger__menu" to="/disliked">
+        <Link className="hamburger__link" to="/disliked">
           <div onClick={() => this.handleFilterClick(SHOW_DISLIKED)}>
             Disliked
           </div>
         </Link>
-        <br />
-        <Link to="/bookmarked">
-          <h3 onClick={() => this.handleFilterClick(SHOW_BOOKMARKED)}>
+        <Link className="hamburger__link" to="/bookmarked">
+          <div onClick={() => this.handleFilterClick(SHOW_BOOKMARKED)}>
             Bookmarked
-          </h3>
+          </div>
         </Link>
       </div>
     );

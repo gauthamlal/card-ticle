@@ -9,3 +9,13 @@
   height: 100vh;
   transition: transform 0.2s ease;
 }
+
+.hamburger__link {
+  text-decoration: none;
+}
+
+.hamburger__link > div {
+  color: white;
+  padding: 10px;
+  background-color: #001100;
+}

@@ -15,7 +15,7 @@
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
   grid-row: 2 / -1;
-  /* display: inline; */
+  background-color: #fafafa;
 }
 
 .index,

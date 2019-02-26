@@ -1,16 +1,51 @@
 .card {
-  border: 1px solid black;
-  margin: 10px 20px;
-  padding: 10px 10px;
+  border: 1px solid #c6c6c6;
+  margin: 40px 0px;
+  text-align: left;
+  border-radius: 2px;
 }
 
-/* .card__img-holder {
-  width: 100%;
-  max-width: 500px;
-} */
+.card:hover {
+  /* box-shadow: 2px 2px 2px #c6c6c6; */
+}
 
 .card__img-holder > img {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   object-fit: cover;
+}
+
+.card__title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.card__title {
+  margin: 0px 10px;
+}
+
+.card__title-link:hover {
+  color: rgb(39, 36, 36);
+}
+
+.card__description {
+  margin: 10px 10px;
+}
+
+.card__description > p {
+  margin: 0px;
+}
+
+.card__buttons {
+  margin: 0px 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.card__buttons > .card__dislike-button {
+  margin-left: 10px;
+}
+
+.card__buttons > .card__bookmark-button {
+  margin-left: auto;
 }
