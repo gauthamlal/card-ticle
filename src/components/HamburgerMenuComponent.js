@@ -31,17 +31,17 @@ class HamburgerMenuComponent extends Component {
         }}
       >
         <Link to="/">
-          <h3 onClick={() => this.handleFilterClick(SHOW_ALL)}>Home</h3>
+          <div className="hamburger__menu" onClick={() => this.handleFilterClick(SHOW_ALL)}>Home</div>
         </Link>
         <br />
-        <Link to="/liked">
-          <h3 onClick={() => this.handleFilterClick(SHOW_LIKED)}>Liked</h3>
+        <Link className="hamburger__menu" to="/liked">
+          <div onClick={() => this.handleFilterClick(SHOW_LIKED)}>Liked</div>
         </Link>
         <br />
-        <Link to="/disliked">
-          <h3 onClick={() => this.handleFilterClick(SHOW_DISLIKED)}>
+        <Link className="hamburger__menu" to="/disliked">
+          <div onClick={() => this.handleFilterClick(SHOW_DISLIKED)}>
             Disliked
-          </h3>
+          </div>
         </Link>
         <br />
         <Link to="/bookmarked">

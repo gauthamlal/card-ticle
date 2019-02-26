@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import "../styles/hamburgerToggle.css";
 import hamburgerAction from "../actions/hamburgerAction";
 
 class HamburgerToggleComponent extends Component {

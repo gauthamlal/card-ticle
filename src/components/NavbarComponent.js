@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import HamburgerToggleComponent from "./HamburgerToggleComponent";
 
@@ -7,8 +8,11 @@ class NavbarComponent extends Component {
     return (
       <div className="navbar">
         <HamburgerToggleComponent />
-        {/* <button onClick={this.handleClick}>Toggle</button> */}
-        <h1>Card-Ticle</h1>
+        <h1>
+          <Link to="/" className="navbar__title">
+            Card-Ticle
+          </Link>
+        </h1>
         <h2>Dummy</h2>
       </div>
     );

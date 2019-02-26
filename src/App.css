@@ -1,42 +1,13 @@
+@import url("./styles/card.css");
+@import url("./styles/navbar.css");
+@import url("./styles/hamburgerMenu.css");
+@import url("./styles/hamburgerToggle.css");
+
 .App {
   text-align: center;
   display: grid;
   grid-template-rows: 100px 1fr;
   position: relative;
-}
-
-.navbar {
-  /* grid-column: 1 / -1; */
-  grid-row: 1 / 2;
-  background-color: black;
-  color: white;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  height: 100px;
-}
-
-/* .navbar > button {
-  margin-right: auto;
-  justify-self: flex-start;
-} */
-
-.navbar > h1 {
-  /* text-align: center; */
-  position: absolute;
-  left: 50%;
-  /* top: 50%; */
-  transform: translate(-50%, -50%);
-}
-
-.navbar > h2 {
-  margin-left: auto;
-  /* justify-self: flex-end; */
-  visibility: hidden;
 }
 
 .container {
@@ -45,23 +16,6 @@
   width: 100%;
   grid-row: 2 / -1;
   /* display: inline; */
-}
-
-.hamburger {
-  /* grid-column: 1 / 3; */
-  /* grid-row: 2 / -1; */
-  background-color: gray;
-  color: black;
-  /* opacity: 1; */
-  z-index: 1;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  /* right: 0; */
-  /* bottom: 0; */
-  width: 150px;
-  height: 100vh;
-  transition: transform 0.2s ease;
 }
 
 .index,

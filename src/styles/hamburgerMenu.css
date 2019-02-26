@@ -1,0 +1,11 @@
+.hamburger {
+  background-color: gray;
+  color: black;
+  z-index: 1;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  transition: transform 0.2s ease;
+}

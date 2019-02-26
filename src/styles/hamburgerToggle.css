@@ -17,7 +17,7 @@
 .hamburger-menu::before {
   width: var(--bar-width);
   height: var(--bar-height);
-  transition: transform 0.3s ease-in;
+  transition: transform 0.2s ease-in;
   display: block;
 }
 

@@ -8,11 +8,9 @@ import {
   toggleBookmark
 } from "../actions/cardActions";
 import shortenText from "../utils/shortenText";
-import "../styles/card.css";
 
 class CardComponent extends Component {
   handleLikeClick = e => {
-    console.log("inside handleLikeClick", this.props.index);
     this.props.toggleLike(this.props.index);
   };
 
