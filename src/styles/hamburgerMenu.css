@@ -1,5 +1,5 @@
 .hamburger {
-  background-color: gray;
+  background-color: rgb(17, 16, 16);
   color: black;
   z-index: 1;
   position: fixed;
@@ -15,7 +15,16 @@
 }
 
 .hamburger__link > div {
+  /* margin: 10px 0px; */
   color: white;
   padding: 10px;
-  background-color: #001100;
+  /* border-top: 1px solid white; */
+  /* border-bottom: 1px solid white; */
+  background-color: #2c2b2b;
+  text-align: left;
+  transition: all 0.2s ease-in;
+}
+
+.hamburger__link > div:hover {
+  background-color: #444343;
 }

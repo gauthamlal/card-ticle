@@ -3,6 +3,7 @@
   margin: 40px 0px;
   text-align: left;
   border-radius: 2px;
+  transition: all 0.2s ease-in;
 }
 
 .card:hover {
@@ -19,6 +20,7 @@
 .card__title-link {
   text-decoration: none;
   color: black;
+  transition: all 0.2s ease-in;
 }
 
 .card__title {
@@ -26,7 +28,7 @@
 }
 
 .card__title-link:hover {
-  color: rgb(39, 36, 36);
+  color: #3f3e3e;
 }
 
 .card__description {
@@ -51,6 +53,8 @@
   width: 9vw;
   border-radius: 2px;
   font-family: "Segoe UI";
+  transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 
 .card__buttons > button > span {
