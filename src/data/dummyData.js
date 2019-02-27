@@ -9,7 +9,7 @@ const cardData = List([
     tags: ["Politics", "India"],
     isLiked: true,
     isDisliked: false,
-    isBookmarked: false
+    isBookmarked: true
   }),
   Map({
     id: 1,

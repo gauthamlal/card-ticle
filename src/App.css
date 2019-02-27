@@ -2,6 +2,7 @@
 @import url("./styles/navbar.css");
 @import url("./styles/hamburgerMenu.css");
 @import url("./styles/hamburgerToggle.css");
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
 
 .App {
   text-align: center;

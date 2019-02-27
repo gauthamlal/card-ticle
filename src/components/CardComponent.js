@@ -27,8 +27,15 @@ class CardComponent extends Component {
       this.props.index % 2 === 0 ? "nathan.jpg" : "daredevil.jpg";
     const data = this.props.card;
 
+    const bookmarkClassName = data.get("isBookmarked")
+      ? "fas fa-bookmark selected"
+      : "far fa-bookmark";
+
     return (
       <div className="card">
+        <div className="card__bookmark-holder">
+          <i className={bookmarkClassName} onClick={this.handleBookmarkClick} />
+        </div>
         <div className="card__img-holder">
           <img src={`/images/${imageLink}`} alt="nathan" />
         </div>
@@ -53,19 +60,15 @@ class CardComponent extends Component {
         </article>
         <div className="card__buttons">
           <button className="card__like-button" onClick={this.handleLikeClick}>
+            <i className="far fa-thumbs-up like" />
             {data.get("isLiked") ? "Liked" : "Like"}
           </button>
           <button
             className="card__dislike-button"
             onClick={this.handleDislikeClick}
           >
+            <i className="far fa-thumbs-down" />
             {data.get("isDisliked") ? "Disliked" : "Dislike"}
-          </button>
-          <button
-            className="card__bookmark-button"
-            onClick={this.handleBookmarkClick}
-          >
-            {data.get("isBookmarked") ? "Bookmarked" : "Bookmark"}
           </button>
         </div>
       </div>

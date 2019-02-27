@@ -6,13 +6,14 @@
 }
 
 .card:hover {
-  /* box-shadow: 2px 2px 2px #c6c6c6; */
+  box-shadow: 0 4px 8px 0 #c6c6c6, 0 6px 20px 0 #c6c6c6;
 }
 
 .card__img-holder > img {
   width: 100%;
   max-width: 700px;
   object-fit: cover;
+  margin-top: 5px;
 }
 
 .card__title-link {
@@ -42,10 +43,35 @@
   display: flex;
 }
 
+.card__buttons > .card__like-button {
+  background-color: blue;
+  color: white;
+}
+
 .card__buttons > .card__dislike-button {
   margin-left: 10px;
 }
 
 .card__buttons > .card__bookmark-button {
   margin-left: auto;
+}
+
+.card__bookmark-holder {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.card__bookmark-holder > i {
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.card__bookmark-holder > i:hover {
+  color: #b10a0a;
+}
+
+.card__bookmark-holder > .selected {
+  color: #b10a0a;
 }
