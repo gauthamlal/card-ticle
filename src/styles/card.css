@@ -43,13 +43,53 @@
   display: flex;
 }
 
-.card__buttons > .card__like-button {
-  background-color: blue;
+.card__buttons > button {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  /* max-width: 8vw; */
+  width: 9vw;
+  border-radius: 2px;
+  font-family: "Segoe UI";
+}
+
+.card__buttons > button > span {
+  margin-left: 5px;
+}
+
+.card__buttons > .card__like-button:hover {
+  background-color: #44c044;
   color: white;
+  box-shadow: 0px 1px 1px 1px #38a838;
+}
+
+.card__buttons > .card__like-button.selected {
+  background-color: #38a838;
+  color: white;
+  /* box-shadow: 0px 1px 1px 1px #38a838; */
+}
+
+.card__buttons > .card__like-button.selected:hover {
+  background-color: #44c044;
 }
 
 .card__buttons > .card__dislike-button {
   margin-left: 10px;
+}
+
+.card__buttons > .card__dislike-button:hover {
+  background-color: #eb2d2d;
+  color: white;
+  box-shadow: 0px 1px 1px 1px #da1313;
+}
+
+.card__buttons > .card__dislike-button.selected {
+  background-color: #da1313;
+  color: white;
+}
+
+.card__buttons > .card__dislike-button.selected:hover {
+  background-color: #eb2d2d;
 }
 
 .card__buttons > .card__bookmark-button {
@@ -69,9 +109,15 @@
 }
 
 .card__bookmark-holder > i:hover {
-  color: #b10a0a;
+  color: #ffd900;
 }
 
 .card__bookmark-holder > .selected {
-  color: #b10a0a;
+  color: #e7c713;
+}
+
+@media (max-width: 850px) {
+  .card__buttons > button > span {
+    display: none;
+  }
 }

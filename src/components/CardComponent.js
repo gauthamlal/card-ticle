@@ -31,6 +31,14 @@ class CardComponent extends Component {
       ? "fas fa-bookmark selected"
       : "far fa-bookmark";
 
+    const likeClassName = data.get("isLiked")
+      ? "card__like-button selected"
+      : "card__like-button";
+
+    const dislikeClassName = data.get("isDisliked")
+      ? "card__dislike-button selected"
+      : "card__dislike-button";
+
     return (
       <div className="card">
         <div className="card__bookmark-holder">
@@ -59,16 +67,16 @@ class CardComponent extends Component {
           </p>
         </article>
         <div className="card__buttons">
-          <button className="card__like-button" onClick={this.handleLikeClick}>
-            <i className="far fa-thumbs-up like" />
-            {data.get("isLiked") ? "Liked" : "Like"}
+          <button className={likeClassName} onClick={this.handleLikeClick}>
+            <i className="fas fa-thumbs-up like" />
+            <span>{data.get("isLiked") ? "Liked" : "Like"}</span>
           </button>
           <button
-            className="card__dislike-button"
+            className={dislikeClassName}
             onClick={this.handleDislikeClick}
           >
-            <i className="far fa-thumbs-down" />
-            {data.get("isDisliked") ? "Disliked" : "Dislike"}
+            <i className="fas fa-thumbs-down" />
+            <span>{data.get("isDisliked") ? "Disliked" : "Dislike"}</span>
           </button>
         </div>
       </div>
