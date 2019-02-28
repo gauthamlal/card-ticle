@@ -7,6 +7,7 @@ const initialState = {
 
 const cardReducer = (state = initialState, action) => {
   switch (action.type) {
+    // When like button is clicked toggle like value and sets dislike to false
     case LIKE_TOGGLE:
       return {
         cardData: state.cardData.updateIn([action.index], item =>
@@ -27,12 +28,14 @@ const cardReducer = (state = initialState, action) => {
     //   ]
     // };
     case DISLIKE_TOGGLE:
+      // When dislike button is clicked toggle dislike value and sets like to false
       return {
         cardData: state.cardData.updateIn([action.index], item =>
           item.set("isLiked", false).set("isDisliked", !item.get("isDisliked"))
         )
       };
     case BOOKMARK_TOGGLE:
+      // When bookmark is clicked toggle bookmark value
       return {
         cardData: state.cardData.map(card => {
           if (card.get("id") === action.index) {

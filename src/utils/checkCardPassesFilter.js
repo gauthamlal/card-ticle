@@ -7,6 +7,7 @@ import {
 
 import store from "../store";
 
+// Checks whether the card passes filter
 const checkCardPassesFilter = index => {
   const state = store.getState();
   switch (state.visibilityFilter) {

@@ -7,6 +7,7 @@ import {
 
 const initialState = SHOW_ALL;
 
+// Sets the current filter selected from menu
 const visibilityFilterReducder = (state = initialState, action) => {
   switch (action.type) {
     case SHOW_ALL:

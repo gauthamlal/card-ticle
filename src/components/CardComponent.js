@@ -23,8 +23,6 @@ class CardComponent extends Component {
   };
 
   render() {
-    const imageLink =
-      this.props.index % 2 === 0 ? "nathan.jpg" : "daredevil.jpg";
     const data = this.props.card;
 
     const bookmarkClassName = data.get("isBookmarked")
@@ -45,7 +43,7 @@ class CardComponent extends Component {
           <i className={bookmarkClassName} onClick={this.handleBookmarkClick} />
         </div>
         <div className="card__img-holder">
-          <img src={`/images/${imageLink}`} alt="nathan" />
+          <img src={`/images/${data.get("image")}`} alt="nathan" />
         </div>
         {this.props.fromIndex ? (
           <h2 className="card__title">

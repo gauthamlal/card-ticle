@@ -7,7 +7,7 @@ const shortenText = text => {
       shortVersion += word;
       word = "";
     }
-    if (i === 100) {
+    if (i === 200) {
       shortVersion += "...";
       return shortVersion;
     }
