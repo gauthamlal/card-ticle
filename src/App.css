@@ -23,3 +23,10 @@
 .individual {
   grid-column: 4 / -4;
 }
+
+@media (max-width: 850px) {
+  .index,
+  .individual {
+    grid-column: 2 / -2;
+  }
+}
