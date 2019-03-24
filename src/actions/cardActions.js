@@ -1,4 +1,10 @@
-import { LIKE_TOGGLE, DISLIKE_TOGGLE, BOOKMARK_TOGGLE } from "./types";
+import {
+  LIKE_TOGGLE,
+  DISLIKE_TOGGLE,
+  BOOKMARK_TOGGLE,
+  LIKE_INCREMENTER,
+  DISLIKE_INCREMENTER
+} from "./types";
 
 // Toggle the like of a card
 export const toggleLike = index => {
@@ -20,6 +26,22 @@ export const toggleDislike = index => {
 export const toggleBookmark = index => {
   return {
     type: BOOKMARK_TOGGLE,
+    index
+  };
+};
+
+// Increment the like of a card
+export const incrementLike = index => {
+  return {
+    type: LIKE_INCREMENTER,
+    index
+  };
+};
+
+// Increment the dislike of a card
+export const incrementDislike = index => {
+  return {
+    type: DISLIKE_INCREMENTER,
     index
   };
 };

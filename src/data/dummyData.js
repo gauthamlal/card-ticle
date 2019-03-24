@@ -8,7 +8,9 @@ const cardData = List([
     tags: ["Hair", "Rights"],
     image: "nathan.jpg",
     isLiked: true,
+    likeCount: 1,
     isDisliked: false,
+    dislikeCount: 0,
     isBookmarked: true
   }),
   Map({
@@ -18,7 +20,9 @@ const cardData = List([
     tags: ["Youth", "Blind lawyers"],
     image: "daredevil.jpg",
     isLiked: false,
+    likeCount: 0,
     isDisliked: false,
+    dislikeCount: 0,
     isBookmarked: false
   }),
   Map({
@@ -28,7 +32,9 @@ const cardData = List([
     tags: ["WWE", "Becky"],
     image: "becky.jpg",
     isLiked: false,
+    likeCount: 0,
     isDisliked: false,
+    dislikeCount: 0,
     isBookmarked: false
   }),
   Map({
@@ -39,7 +45,9 @@ const cardData = List([
     tags: ["Football", "Chelsea"],
     image: "kepa.jpg",
     isLiked: false,
+    likeCount: 0,
     isDisliked: false,
+    dislikeCount: 0,
     isBookmarked: false
   }),
   Map({
@@ -50,7 +58,9 @@ const cardData = List([
     tags: ["Programming", "JavaScript"],
     image: "react.jpg",
     isLiked: false,
+    likeCount: 0,
     isDisliked: false,
+    dislikeCount: 0,
     isBookmarked: false
   })
 ]);

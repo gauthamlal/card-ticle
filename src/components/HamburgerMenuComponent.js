@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import visibilityFilterAction from "../actions/visibilityActions";
 import hamburgerAction from "../actions/hamburgerAction";
+import changeLayout from "../actions/layoutAction";
 
 import {
   SHOW_ALL,
@@ -18,6 +19,11 @@ class HamburgerMenuComponent extends Component {
       this.props.visibilityFilterAction(filter);
       this.props.hamburgerAction();
     }
+  };
+
+  handleLayoutChange = () => {
+    this.props.hamburgerAction();
+    this.props.changeLayout();
   };
 
   render() {
@@ -46,6 +52,11 @@ class HamburgerMenuComponent extends Component {
             Bookmarked
           </div>
         </Link>
+        <div className="hamburger__link">
+          <div onClick={this.handleLayoutChange}>
+            Change to: {!this.props.isList ? "List" : "Grid"}
+          </div>
+        </div>
       </div>
     );
   }
@@ -53,12 +64,14 @@ class HamburgerMenuComponent extends Component {
 
 const mapStateToProps = state => ({
   isOpen: state.hamburger.isOpen,
-  currentFilter: state.visibilityFilter
+  currentFilter: state.visibilityFilter,
+  isList: state.isList
 });
 
 const mapDispatchToProps = dispatch => ({
   visibilityFilterAction: filter => dispatch(visibilityFilterAction(filter)),
-  hamburgerAction: () => dispatch(hamburgerAction())
+  hamburgerAction: () => dispatch(hamburgerAction()),
+  changeLayout: () => dispatch(changeLayout())
 });
 
 export default connect(

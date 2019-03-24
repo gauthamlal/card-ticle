@@ -5,17 +5,21 @@ import { Link } from "react-router-dom";
 import {
   toggleLike,
   toggleDislike,
-  toggleBookmark
+  toggleBookmark,
+  incrementLike,
+  incrementDislike
 } from "../actions/cardActions";
 import shortenText from "../utils/shortenText";
 
 class CardComponent extends Component {
   handleLikeClick = e => {
-    this.props.toggleLike(this.props.index);
+    // this.props.toggleLike(this.props.index);
+    this.props.incrementLike(this.props.index);
   };
 
   handleDislikeClick = e => {
-    this.props.toggleDislike(this.props.index);
+    // this.props.toggleDislike(this.props.index);
+    this.props.incrementDislike(this.props.index);
   };
 
   handleBookmarkClick = e => {
@@ -67,14 +71,14 @@ class CardComponent extends Component {
         <div className="card__buttons">
           <button className={likeClassName} onClick={this.handleLikeClick}>
             <i className="fas fa-thumbs-up like" />
-            <span>{data.get("isLiked") ? "Liked" : "Like"}</span>
+            <span>{data.get("likeCount")}</span>
           </button>
           <button
             className={dislikeClassName}
             onClick={this.handleDislikeClick}
           >
             <i className="fas fa-thumbs-down" />
-            <span>{data.get("isDisliked") ? "Disliked" : "Dislike"}</span>
+            <span>{data.get("dislikeCount")}</span>
           </button>
         </div>
       </div>
@@ -89,7 +93,9 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   toggleLike: index => dispatch(toggleLike(index)),
   toggleDislike: index => dispatch(toggleDislike(index)),
-  toggleBookmark: index => dispatch(toggleBookmark(index))
+  toggleBookmark: index => dispatch(toggleBookmark(index)),
+  incrementLike: index => dispatch(incrementLike(index)),
+  incrementDislike: index => dispatch(incrementDislike(index))
 });
 
 export default connect(

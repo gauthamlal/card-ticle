@@ -14,13 +14,18 @@ class IndexComponent extends Component {
       }
     }
 
-    return <div className="index">{cardStack}</div>;
+    return (
+      <div className={this.props.isList ? "index" : "grid-index"}>
+        {cardStack}
+      </div>
+    );
   }
 }
 
 const mapStateToProps = state => ({
   cardSize: state.card.cardData.size,
-  visibilityFilter: state.visibilityFilter
+  visibilityFilter: state.visibilityFilter,
+  isList: state.isList
 });
 
 export default connect(

@@ -120,8 +120,8 @@
   color: #e7c713;
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .card__buttons > button > span {
     display: none;
   }
-}
+} */

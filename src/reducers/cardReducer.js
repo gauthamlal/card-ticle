@@ -1,5 +1,11 @@
 import cardData from "../data/dummyData";
-import { LIKE_TOGGLE, DISLIKE_TOGGLE, BOOKMARK_TOGGLE } from "../actions/types";
+import {
+  LIKE_TOGGLE,
+  DISLIKE_TOGGLE,
+  BOOKMARK_TOGGLE,
+  LIKE_INCREMENTER,
+  DISLIKE_INCREMENTER
+} from "../actions/types";
 
 const initialState = {
   cardData
@@ -44,6 +50,20 @@ const cardReducer = (state = initialState, action) => {
             return card;
           }
         })
+      };
+    case LIKE_INCREMENTER:
+      return {
+        cardData: state.cardData.updateIn([action.index], item =>
+          item.set("likeCount", item.get("likeCount") + 1).set("isLiked", true)
+        )
+      };
+    case DISLIKE_INCREMENTER:
+      return {
+        cardData: state.cardData.updateIn([action.index], item =>
+          item
+            .set("dislikeCount", item.get("dislikeCount") + 1)
+            .set("isDisliked", true)
+        )
       };
     default:
       return state;
